@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			padding: 30px;
+			font-family: arial;
+		}
+
+		div {
+			display: flex;
+			max-width: 400px;
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+
+		h2 {
+			margin-bottom: 12px;
+		}
+
+		input {
+			padding: 8px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
+        .input{
+            position: relative;
+        }
+        .input img{
+            position: absolute;
+            right: 3px;
+            top: 4px;
+        }
+	</style>
+</head>
+<body>
+	<div>
+		<label>
+			<h2>Ունեմ</h2>
+            <div class="input">
+                <img id="menu1" src="-keyboard-arrow-down_90691.svg" alt="icon">
+                <input type="text" placeholder="AMD" name="amd" id="amd" />
+            </div>
+			
+			
+		</label>
+		<label>
+			<h2>Ցանկանում եմ</h2>
+            <div class="input">
+                <img id="menu2" src="-keyboard-arrow-down_90691.svg" alt="icon">
+                <input type="text" placeholder="USD" name="usd" id="usd" />
+            </div>
+			
+			
+		</label>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+</html>

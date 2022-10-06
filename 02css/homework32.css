@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#box{
+    width: 100px;
+    height: 100px;
+    cursor: move;
+    background: rgb(3, 105, 29);
+}
+#box1{
+    width: 100px;
+    height: 100px;
+    cursor: move;
+    background: rgb(240, 3, 54);
+}
+body{
+   display:flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+
+}
