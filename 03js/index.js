@@ -1,30 +1,50 @@
 "use strict";
 const API = "index.json"
 // AJAX = Asyncron JavaScript and XML
-let result = {}
-
 function foo (){
+  const result = {}
    fetch(API)
     .then((res)=> res.json())
-    .then((res => {
-        result = {value: res}
+    .then(((res) => {
+		return result.value = res
     }))
     return result
 }
-console.log(foo());   
+const data = foo()
+console.log(data);   
 
 
 const AMD_input = document.getElementById("amd");
 const USD_input = document.getElementById("usd");
 const MENU1 = document.getElementById("menu1")
 const MENU2 = document.getElementById("menu2")
+const inputDivBox1 = document.querySelector(".input1")
+const inputDivBox2 = document.querySelector(".input2")
+
 
 MENU1.addEventListener("click", ()=>{
-    const div = document.createElement("div")
-    div.className = dropDown
-    const p = document.createElement("p") 
-    // p.textContent = `${}`
+	const div = document.createElement("div")
+	div.classList = "dropDown"
+	data.value.map((value) => {
+		const p = document.createElement("p")
+		p.textContent = value.name
+		p.id = value.id
+		return div.append(p)
+	})
+	return inputDivBox1.append(div)
 })
+MENU2.addEventListener("click", ()=>{
+	const div = document.createElement("div")
+	div.classList = "dropDown"
+	data.value.map((value) => {
+		const p = document.createElement("p")
+		p.textContent = value.name
+		p.id = value.id
+		return div.append(p)
+	})
+	return inputDivBox2.append(div)
+})
+
 
 AMD_input.addEventListener("input", (e) => {
 	const request = new XMLHttpRequest();

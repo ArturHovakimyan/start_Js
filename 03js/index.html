@@ -29,39 +29,63 @@
 		}
 
 		input {
+			display: block;
+			width: 200px;
+			height: 30px;
 			padding: 8px;
 			border: 1px solid #ccc;
 			border-radius: 3px;
 		}
-        .input{
+        .input1{
             position: relative;
+			display: flex;
+			flex-direction: column;
         }
-        .input img{
+        .input1 img{
             position: absolute;
             right: 3px;
             top: 4px;
         }
+        .input2{
+            position: relative;
+			display: flex;
+			flex-direction: column;
+        }
+        .input2 img{
+            position: absolute;
+            right: 3px;
+            top: 4px;
+        }
+		.dropDown{
+			display: flex;
+			flex-direction: column;
+			width: 200px;
+			height: 90px;
+			border-radius: 5px;
+			border: 1px solid gray;
+			background-color: bisque;
+		}
+		.dropDown p{
+			margin-left: 10px;
+			margin-top: 10px;
+		}
 	</style>
 </head>
 <body>
 	<div>
 		<label>
 			<h2>Ունեմ</h2>
-            <div class="input">
+            <div class="input1">
                 <img id="menu1" src="-keyboard-arrow-down_90691.svg" alt="icon">
                 <input type="text" placeholder="AMD" name="amd" id="amd" />
             </div>
-			
-			
 		</label>
 		<label>
 			<h2>Ցանկանում եմ</h2>
-            <div class="input">
+            <div class="input2">
                 <img id="menu2" src="-keyboard-arrow-down_90691.svg" alt="icon">
                 <input type="text" placeholder="USD" name="usd" id="usd" />
             </div>
-			
-			
 		</label>
 	</div>
 
